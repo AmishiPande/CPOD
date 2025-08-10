@@ -20,7 +20,10 @@ jobs:
       run: npm install
 
     - name: Build project
-      run: npm run build
+      run: |
+        # Fix path issues
+        mkdir -p public
+        npm run build
 
     - name: Verify build
       run: ls -la dist
