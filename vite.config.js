@@ -1,14 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path'
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      include: ['**/*.jsx', '**/*.js'] // Process both .js and .jsx files as JSX
+    })
+  ],
   base: '/CPOD/',
   build: {
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'public/index.html')
+        main: 'public/index.html'
       }
     }
   }
