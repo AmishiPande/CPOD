@@ -21,17 +21,17 @@ jobs:
       with:
         node-version: 20
 
+    - name: Rename JS to JSX  # Add this step
+      run: |
+        find src -name "*.js" -exec sh -c 'mv "$0" "${0%.js}.jsx"' {} \;
+        sed -i 's/\.js"/\.jsx"/g' src/index.jsx src/App.jsx
+        sed -i 's/\.js"/\.jsx"/g' src/**/*.jsx
+
     - name: Install dependencies
       run: npm install
 
     - name: Build project
-      run: |
-        # Fix path issues
-        mkdir -p public
-        npm run build
-
-    - name: Verify build
-      run: ls -la dist
+      run: npm run build
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
