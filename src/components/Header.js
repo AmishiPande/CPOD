@@ -5,7 +5,8 @@ const Header = () => {
   return (
     <header>
       <div className="container">
-        <h1>Space Pictures</h1>
+        <h1>CPOD</h1>
+        <h4>Cat Pictures Of the Day!</h4>
         <nav>
           <ul>
             <li><Link to="/">Today's Picture</Link></li>
