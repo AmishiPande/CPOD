@@ -15,3 +15,4 @@ if (rootElement) {
 } else {
   console.error('Root element not found!');
 }
+console.log('Index.jsx loaded!'); // Should appear in console
