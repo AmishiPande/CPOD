@@ -6,6 +6,7 @@ import Submit from './pages/Submit.jsx';  // Updated
 import PictureDetail from './pages/PictureDetail.jsx';  // Updated
 
 function App() {
+  console.log('App component rendered!'); // Should appear in console
   return (
     <Router basename="/CPOD">
       <Routes>
