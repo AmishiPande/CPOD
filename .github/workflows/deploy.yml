@@ -39,3 +39,12 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
         force_orphan: true
+    
+    - name: Verify build output
+      run: |
+        echo "Checking dist directory contents:"
+        ls -la dist
+        echo "Checking index.html content:"
+        cat dist/index.html
+        echo "Checking main JS file:"
+        find dist/assets -name 'index-*.js' -exec head -n 5 {} \;
