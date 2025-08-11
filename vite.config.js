@@ -7,7 +7,7 @@ export default defineConfig({
       include: ['**/*.jsx', '**/*.js'] // Process both .js and .jsx files as JSX
     })
   ],
-  base: '/CPOD/',
+  base: './',
   build: {
     rollupOptions: {
       input: {
