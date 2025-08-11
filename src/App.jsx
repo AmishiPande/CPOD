@@ -7,7 +7,7 @@ import PictureDetail from './pages/PictureDetail.jsx';  // Updated
 
 function App() {
   return (
-    <Router>
+    <Router basename="/CPOD">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/archive" element={<Archive />} />
